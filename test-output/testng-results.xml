@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-13T10:29:47 IST" name="Suite" finished-at="2023-12-13T10:30:21 IST" duration-ms="34105">
+    <groups>
+    </groups>
+    <test started-at="2023-12-13T10:29:47 IST" name="Test" finished-at="2023-12-13T10:30:21 IST" duration-ms="34105">
+      <class name="api.testValidations.testValidations">
+        <test-method is-config="true" signature="setUpPayload()[pri:0, instance:api.testValidations.testValidations@7adf16aa]" started-at="2023-12-13T10:30:14 IST" name="setUpPayload" finished-at="2023-12-13T10:30:15 IST" duration-ms="209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPayload -->
+        <test-method signature="testPOST()[pri:1, instance:api.testValidations.testValidations@7adf16aa]" started-at="2023-12-13T10:30:15 IST" name="testPOST" finished-at="2023-12-13T10:30:16 IST" duration-ms="1492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPOST -->
+        <test-method is-config="true" signature="setUpPayload()[pri:0, instance:api.testValidations.testValidations@7adf16aa]" started-at="2023-12-13T10:30:16 IST" name="setUpPayload" finished-at="2023-12-13T10:30:16 IST" duration-ms="56" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPayload -->
+        <test-method signature="testGET()[pri:2, instance:api.testValidations.testValidations@7adf16aa]" started-at="2023-12-13T10:30:16 IST" name="testGET" finished-at="2023-12-13T10:30:18 IST" duration-ms="1820" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGET -->
+        <test-method is-config="true" signature="setUpPayload()[pri:0, instance:api.testValidations.testValidations@7adf16aa]" started-at="2023-12-13T10:30:18 IST" name="setUpPayload" finished-at="2023-12-13T10:30:18 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPayload -->
+        <test-method signature="testPUT()[pri:3, instance:api.testValidations.testValidations@7adf16aa]" started-at="2023-12-13T10:30:18 IST" name="testPUT" finished-at="2023-12-13T10:30:20 IST" duration-ms="1498" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPUT -->
+        <test-method is-config="true" signature="setUpPayload()[pri:0, instance:api.testValidations.testValidations@7adf16aa]" started-at="2023-12-13T10:30:20 IST" name="setUpPayload" finished-at="2023-12-13T10:30:20 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPayload -->
+        <test-method signature="testDELETE()[pri:4, instance:api.testValidations.testValidations@7adf16aa]" started-at="2023-12-13T10:30:20 IST" name="testDELETE" finished-at="2023-12-13T10:30:21 IST" duration-ms="1932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDELETE -->
+      </class> <!-- api.testValidations.testValidations -->
+      <class name="api.testValidations.dataDrivenValidations">
+        <test-method signature="testPOST(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.testValidations.dataDrivenValidations@58e6d4b8]" started-at="2023-12-13T10:29:50 IST" name="testPOST" data-provider="Data" finished-at="2023-12-13T10:29:55 IST" duration-ms="4712" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1200]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[50]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Palash]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Marconi]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPOST -->
+        <test-method signature="testPOST(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.testValidations.dataDrivenValidations@58e6d4b8]" started-at="2023-12-13T10:29:55 IST" name="testPOST" data-provider="Data" finished-at="2023-12-13T10:29:57 IST" duration-ms="1669" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1300]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[45]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Gutthi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Churmura ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPOST -->
+        <test-method signature="testPOST(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.testValidations.dataDrivenValidations@58e6d4b8]" started-at="2023-12-13T10:29:57 IST" name="testPOST" data-provider="Data" finished-at="2023-12-13T10:29:58 IST" duration-ms="1533" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1400]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[23]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Patthi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Piloi]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPOST -->
+        <test-method signature="testPOST(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.testValidations.dataDrivenValidations@58e6d4b8]" started-at="2023-12-13T10:29:58 IST" name="testPOST" data-provider="Data" finished-at="2023-12-13T10:30:00 IST" duration-ms="1636" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1340]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[34]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Kutti]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Chutiya]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPOST -->
+        <test-method signature="testGET(java.lang.String)[pri:2, instance:api.testValidations.dataDrivenValidations@58e6d4b8]" started-at="2023-12-13T10:30:00 IST" name="testGET" data-provider="authID" finished-at="2023-12-13T10:30:02 IST" duration-ms="1819" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[50]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGET -->
+        <test-method signature="testGET(java.lang.String)[pri:2, instance:api.testValidations.dataDrivenValidations@58e6d4b8]" started-at="2023-12-13T10:30:02 IST" name="testGET" data-provider="authID" finished-at="2023-12-13T10:30:04 IST" duration-ms="1533" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[45]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGET -->
+        <test-method signature="testGET(java.lang.String)[pri:2, instance:api.testValidations.dataDrivenValidations@58e6d4b8]" started-at="2023-12-13T10:30:04 IST" name="testGET" data-provider="authID" finished-at="2023-12-13T10:30:05 IST" duration-ms="1636" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[23]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGET -->
+        <test-method signature="testGET(java.lang.String)[pri:2, instance:api.testValidations.dataDrivenValidations@58e6d4b8]" started-at="2023-12-13T10:30:05 IST" name="testGET" data-provider="authID" finished-at="2023-12-13T10:30:07 IST" duration-ms="1535" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[34]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGET -->
+        <test-method signature="testDELETE(java.lang.String)[pri:3, instance:api.testValidations.dataDrivenValidations@58e6d4b8]" started-at="2023-12-13T10:30:07 IST" name="testDELETE" data-provider="authID" finished-at="2023-12-13T10:30:09 IST" duration-ms="2542" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[50]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDELETE -->
+        <test-method signature="testDELETE(java.lang.String)[pri:3, instance:api.testValidations.dataDrivenValidations@58e6d4b8]" started-at="2023-12-13T10:30:09 IST" name="testDELETE" data-provider="authID" finished-at="2023-12-13T10:30:11 IST" duration-ms="1825" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[45]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDELETE -->
+        <test-method signature="testDELETE(java.lang.String)[pri:3, instance:api.testValidations.dataDrivenValidations@58e6d4b8]" started-at="2023-12-13T10:30:11 IST" name="testDELETE" data-provider="authID" finished-at="2023-12-13T10:30:13 IST" duration-ms="1634" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[23]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDELETE -->
+        <test-method signature="testDELETE(java.lang.String)[pri:3, instance:api.testValidations.dataDrivenValidations@58e6d4b8]" started-at="2023-12-13T10:30:13 IST" name="testDELETE" data-provider="authID" finished-at="2023-12-13T10:30:14 IST" duration-ms="1533" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[34]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDELETE -->
+      </class> <!-- api.testValidations.dataDrivenValidations -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
