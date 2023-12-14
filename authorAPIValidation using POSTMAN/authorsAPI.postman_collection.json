@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "e24ed152-97e4-462d-b0a3-b7de24a7382d",
+		"name": "authorsAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30138669",
+		"_collection_link": "https://www.postman.com/speeding-firefly-420847/workspace/reqres/collection/30138669-e24ed152-97e4-462d-b0a3-b7de24a7382d?action=share&source=collection_link&creator=30138669"
+	},
+	"item": [
+		{
+			"name": "createAuthors",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Creating Random Data\r",
+							"\r",
+							"var authRandomStr = Math.random.toString(30).substring(2,7);\r",
+							"var authRandomNum = Math.floor((Math.random()*10)+1);\r",
+							"\r",
+							"// Setting Collection Variables\r",
+							"\r",
+							"pm.collectionVariables.set(\"authID\", authRandomNum);\r",
+							"pm.collectionVariables.set(\"authBookID\", authRandomNum);\r",
+							"pm.collectionVariables.set(\"authFN\", authRandomStr);\r",
+							"pm.collectionVariables.set(\"authLN\", authRandomStr);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check POST Status Code\", () =>\r",
+							"{\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check POST Response Time\", () =>\r",
+							"{\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check POST Headers\", () =>\r",
+							"{\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json; charset=utf-8; v=1.0\");\r",
+							"\r",
+							"    pm.expect(pm.response.headers.get(\"Server\")).to.eql(\"Kestrel\");\r",
+							"});\r",
+							"\r",
+							"// Validating POST Response Body\r",
+							"\r",
+							"const authPOSTJSONData = JSON.parse(responseBody);\r",
+							"\r",
+							"pm.test(\"Check POST ID\", () =>\r",
+							"{\r",
+							"    pm.expect(authPOSTJSONData.id).to.eql(pm.collectionVariables.get(\"authID\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check POST BookID\", () =>\r",
+							"{\r",
+							"    pm.expect(authPOSTJSONData.idBook).to.eql(pm.collectionVariables.get(\"authBookID\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check POST First Name\", () =>\r",
+							"{\r",
+							"    pm.expect(authPOSTJSONData.firstName).to.eql(pm.collectionVariables.get(\"authFN\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check POST Last Name\", () =>\r",
+							"{\r",
+							"    pm.expect(authPOSTJSONData.lastName).to.eql(pm.collectionVariables.get(\"authLN\"));\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": {{authID}},\r\n  \"idBook\": {{authBookID}},\r\n  \"firstName\": \"{{authFN}}\",\r\n  \"lastName\": \"{{authLN}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Authors",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check GET Status Code\", () =>\r",
+							"{\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check GET Response Time\", () =>\r",
+							"{\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Authors/{{authID}}",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"{{authID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAuthors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check PUT Status Code\", () =>\r",
+							"{\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check PUT Response Time\", ()=>\r",
+							"{\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": {{authID}},\r\n  \"idBook\": {{authBookID}},\r\n  \"firstName\": \"{{authFN}}\",\r\n  \"lastName\": \"{{authLN}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Authors/{{authID}}",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"{{authID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAuthors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check DELETE Status Code\", () =>\r",
+							"{\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check DELETE Response Time\", () =>\r",
+							"{\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Authors/{{authID}}",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"{{authID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "authID",
+			"value": ""
+		},
+		{
+			"key": "authBookID",
+			"value": ""
+		},
+		{
+			"key": "authFN",
+			"value": ""
+		},
+		{
+			"key": "authLN",
+			"value": ""
+		}
+	]
+}
