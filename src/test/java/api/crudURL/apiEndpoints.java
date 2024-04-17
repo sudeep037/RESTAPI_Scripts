@@ -1,8 +1,11 @@
 package api.crudURL;
 
+
+// Keeping base URI along with Request URI 
+
 public class apiEndpoints {
 
-	public static String baseURI = "https://fakerestapi.azurewebsites.net/api/v1/Authors";
+	public static String baseURI = "";
 	
 	public static String postURI = baseURI;
 	public static String getURI = baseURI+"/{authID}";

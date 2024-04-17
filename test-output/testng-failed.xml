@@ -7,8 +7,8 @@
         <methods>
           <include name="setUpPayload"/>
           <include name="testGET"/>
-          <include name="testDELETE"/>
           <include name="testPOST"/>
+          <include name="testDELETE"/>
           <include name="testPUT"/>
         </methods>
       </class> <!-- api.testValidations.testValidations -->

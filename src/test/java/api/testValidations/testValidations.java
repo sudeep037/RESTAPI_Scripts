@@ -37,10 +37,12 @@ public class testValidations {
 		
 		Response response = CRUDOperations.createAuth(authPayload);
 		response.then().log().all();
+		
+		response.jsonPath().get("projectId");
+		
 		Assert.assertEquals(response.getStatusCode(),200);
 		Assert.assertEquals(response.getContentType(), "application/json; charset=utf-8; v=1.0");
 		Assert.assertEquals(response.getHeader("Server"), "Kestrel");
-		
 		JSONObject jo = new JSONObject(response.asString());
 		boolean status = false;
 		/*Assert.assertEquals(jo.get("id"), authPayload.getId());

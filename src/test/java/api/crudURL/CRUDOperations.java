@@ -16,7 +16,7 @@ public class CRUDOperations {
 		 .contentType(ContentType.JSON)
 		 .body(Payload)
 		 
-		.when()
+		 .when()
 		 .post(apiEndpoints.postURI);
 		
 		return response;
@@ -28,7 +28,7 @@ public class CRUDOperations {
 		 .contentType(ContentType.JSON)
 		 .pathParam("authID", authID)
 		 
-		.when()
+		 .when()
 		 .get(apiEndpoints.getURI);
 		
 		return response;
@@ -37,12 +37,12 @@ public class CRUDOperations {
 	public static Response putAuth(int authID, authPOJO Payload)
 	{
 		Response response = given()
-				.contentType(ContentType.JSON)
-				.pathParam("authID", authID)
-				.body(Payload)
+		.contentType(ContentType.JSON)
+		.pathParam("authID", authID)
+		.body(Payload)
 				
-			.when()
-			 .put(apiEndpoints.putURI);
+		.when()
+		.put(apiEndpoints.putURI);
 		
 		return response;
 	}
